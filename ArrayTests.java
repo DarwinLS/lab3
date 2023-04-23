@@ -22,8 +22,15 @@ public class ArrayTests {
   }
 
   @Test
-  public void testAverage(){
-    double[] input1 = {1.0,1.0,3.0,3.0};
-    assertEquals(3.0, ArrayExamples.averageWithoutLowest(input1),0);
+  public void testErrorAWL(){
+    double[] errorInput = {1.0,1.0,3.0,3.0};
+    assertEquals(3.0, ArrayExamples.averageWithoutLowest(errorInput),0);
   }
+  
+  @Test
+  public void testNoErrorAWL(){
+    double[] nonErrorInput = {2.0,4.0,6.0};
+    assertEquals(5.0, ArrayExamples.averageWithoutLowest(nonErrorInput),0);
+  }
+  
 }
